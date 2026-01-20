@@ -2,8 +2,10 @@
 
 namespace PeterFox\PhpUnitToonResultPrinter\Tests;
 
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 
+#[Group('poc')]
 class ExampleTest extends TestCase
 {
     public function test_it_passes(): void

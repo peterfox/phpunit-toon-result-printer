@@ -11,7 +11,7 @@ class ExtensionTest extends TestCase
     public function test_it_outputs_toon_format(): void
     {
         $command = sprintf(
-            '%s vendor/bin/phpunit tests/ExampleTest.php --configuration phpunit.xml.dist',
+            '%s vendor/bin/phpunit tests/ExampleTest.php --configuration phpunit.xml.dist --group poc',
             PHP_BINARY
         );
 

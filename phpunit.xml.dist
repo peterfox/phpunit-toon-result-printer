@@ -20,6 +20,11 @@
             <directory>./tests</directory>
         </testsuite>
     </testsuites>
+    <groups>
+        <exclude>
+            <group>poc</group>
+        </exclude>
+    </groups>
     <extensions>
         <bootstrap class="PeterFox\PhpUnitToonResultPrinter\ToonResultPrinterExtension" />
     </extensions>
