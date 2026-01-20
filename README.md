@@ -1,8 +1,8 @@
 # A PHPUnit results printer that works with the TOON format
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/peter-fox/phpunit-toon-result-printer.svg?style=flat-square)](https://packagist.org/packages/peter-fox/phpunit-toon-result-printer)
-[![Tests](https://img.shields.io/github/actions/workflow/status/peter-fox/phpunit-toon-result-printer/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/peter-fox/phpunit-toon-result-printer/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/peter-fox/phpunit-toon-result-printer.svg?style=flat-square)](https://packagist.org/packages/peter-fox/phpunit-toon-result-printer)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/peterfox/phpunit-toon-result-printer.svg?style=flat-square)](https://packagist.org/packages/peterfox/phpunit-toon-result-printer)
+[![Tests](https://img.shields.io/github/actions/workflow/status/peterfox/phpunit-toon-result-printer/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/peterfox/phpunit-toon-result-printer/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/peterfox/phpunit-toon-result-printer.svg?style=flat-square)](https://packagist.org/packages/peterfox/phpunit-toon-result-printer)
 
 This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
 
@@ -19,7 +19,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require peter-fox/phpunit-toon-result-printer
+composer require peterfox/phpunit-toon-result-printer
 ```
 
 ## Usage

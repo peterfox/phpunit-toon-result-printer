@@ -1,11 +1,11 @@
 {
-    "name": "peter-fox/phpunit-toon-result-printer",
+    "name": "peterfox/phpunit-toon-result-printer",
     "description": "A PHPUnit results printer that works with the TOON format",
     "keywords": [
         "Peter Fox",
         "phpunit-toon-result-printer"
     ],
-    "homepage": "https://github.com/peter-fox/phpunit-toon-result-printer",
+    "homepage": "https://github.com/peterfox/phpunit-toon-result-printer",
     "license": "MIT",
     "authors": [
         {
@@ -35,13 +35,12 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
-            "test-coverage": "vendor/bin/phpunit --coverage",
+        "test-coverage": "vendor/bin/phpunit --coverage",
         "format": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --allow-risky=yes"
     },
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            
             "phpstan/extension-installer": true
         }
     },
