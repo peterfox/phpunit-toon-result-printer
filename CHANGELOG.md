@@ -1,4 +1,4 @@
 # Changelog
 
-All notable changes to `:package_name` will be documented in this file.
+All notable changes to `phpunit-toon-result-printer` will be documented in this file.
 

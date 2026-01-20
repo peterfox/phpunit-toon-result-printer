@@ -1,16 +1,16 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "peter-fox/phpunit-toon-result-printer",
+    "description": "A PHPUnit results printer that works with the TOON format",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "Peter Fox",
+        "phpunit-toon-result-printer"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/peter-fox/phpunit-toon-result-printer",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Peter Fox",
+            "email": "peter.fox@peterfox.me",
             "role": "Developer"
         }
     ],
@@ -18,28 +18,29 @@
         "php": "^8.4"
     },
     "require-dev": {
-        :require_dev_testing,
-        :require_dev_codestyle,
+        "phpunit/phpunit": "^10.3.2",
+        "friendsofphp/php-cs-fixer": "^3.21.1",
         "spatie/ray": "^1.28"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "PeterFox\\PhpUnitToonResultPrinter\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "PeterFox\\PhpUnitToonResultPrinter\\Tests\\": "tests"
         }
     },
     "scripts": {
-        :scripts_testing,
-        :scripts_codestyle
+        "test": "vendor/bin/phpunit",
+            "test-coverage": "vendor/bin/phpunit --coverage",
+        "format": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --allow-risky=yes"
     },
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            :plugins_testing,
+            
             "phpstan/extension-installer": true
         }
     },
