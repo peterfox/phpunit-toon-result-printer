@@ -1,18 +1,19 @@
-# A PHPUnit results printer that works with the TOON format
+# PHPUnit TOON Result Printer
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/peterfox/phpunit-toon-result-printer.svg?style=flat-square)](https://packagist.org/packages/peterfox/phpunit-toon-result-printer)
 [![Tests](https://img.shields.io/github/actions/workflow/status/peterfox/phpunit-toon-result-printer/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/peterfox/phpunit-toon-result-printer/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/peterfox/phpunit-toon-result-printer.svg?style=flat-square)](https://packagist.org/packages/peterfox/phpunit-toon-result-printer)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+A PHPUnit results printer that outputs test results in [TOON](https://github.com/helgesverre/toon) (Token-Oriented Object Notation) format.
 
-## Support us
+This extension is specifically designed to provide compact, highly readable test results optimized for LLM (Large Language Model) consumption, helping AI agents quickly diagnose test failures.
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/phpunit-toon-result-printer.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/phpunit-toon-result-printer)
+## Features
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+- **Compact Output**: Uses TOON format to minimize token usage while remaining human-readable.
+- **AI-Friendly Diagnostics**: Includes file paths, line numbers, error messages, and stack traces for failed and errored tests.
+- **Concise Success Reports**: Passed tests only show the test name and status to keep the output focused on what needs attention.
+- **PHPUnit Extension**: Integrates seamlessly as a PHPUnit extension.
 
 ## Installation
 
@@ -22,11 +23,45 @@ You can install the package via composer:
 composer require peterfox/phpunit-toon-result-printer
 ```
 
-## Usage
+## Configuration
 
-```php
-$skeleton = new PeterFox\PhpUnitToonResultPrinter();
-echo $skeleton->echoPhrase('Hello, PeterFox!');
+### Permanent (Recommended)
+
+To use this printer, add it as an extension in your `phpunit.xml` or `phpunit.xml.dist` file:
+
+```xml
+<extensions>
+    <bootstrap class="PeterFox\PhpUnitToonResultPrinter\ToonResultPrinterExtension" />
+</extensions>
+```
+
+When enabled, it will suppress PHPUnit's default progress and result output, replacing it with TOON-formatted output at the end of the test execution.
+
+### Manual (CLI)
+
+If you don't want to enable it for all test runs, you can trigger it manually using the `--extension` flag:
+
+```bash
+vendor/bin/phpunit --extension "PeterFox\PhpUnitToonResultPrinter\ToonResultPrinterExtension"
+```
+
+## Example Output
+
+For a passing test:
+```text
+test: "Tests\\ExampleTest::test_it_passes"
+status: passed
+```
+
+For a failing test:
+```text
+test: "Tests\\ExampleTest::test_it_fails"
+status: failed
+file: "tests/ExampleTest.php"
+line: 16
+message: "Failed asserting that false is true."
+description: "Failed asserting that false is true."
+stackTrace: "..."
 ```
 
 ## Testing
@@ -39,18 +74,9 @@ composer test
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Contributing
-
-Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
 ## Credits
 
 - [Peter Fox](https://github.com/peterfox)
-- [All Contributors](../../contributors)
 
 ## License
 
