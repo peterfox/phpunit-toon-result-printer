@@ -17,16 +17,12 @@
 >
     <testsuites>
         <testsuite name="PeterFox Test Suite">
-            <directory>tests</directory>
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
-    <coverage>
-        <report>
-            <html outputDirectory="build/coverage"/>
-            <text outputFile="build/coverage.txt"/>
-            <clover outputFile="build/logs/clover.xml"/>
-        </report>
-    </coverage>
+    <extensions>
+        <bootstrap class="PeterFox\PhpUnitToonResultPrinter\ToonResultPrinterExtension" />
+    </extensions>
     <logging>
         <junit outputFile="build/report.junit.xml"/>
     </logging>
