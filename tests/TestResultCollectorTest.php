@@ -5,22 +5,21 @@ declare(strict_types=1);
 namespace PeterFox\PhpUnitToonResultPrinter\Tests;
 
 use PeterFox\PhpUnitToonResultPrinter\TestResultCollector;
-use PHPUnit\Event\Code\Test;
-use PHPUnit\Event\Code\TestMethod;
 use PHPUnit\Event\Code\TestDox;
-use PHPUnit\Metadata\MetadataCollection;
-use PHPUnit\Event\TestData\TestDataCollection;
+use PHPUnit\Event\Code\TestMethod;
 use PHPUnit\Event\Code\Throwable;
-use PHPUnit\Event\Telemetry\GarbageCollectorStatus;
-use PHPUnit\Event\Telemetry\Info;
-use PHPUnit\Event\Telemetry\Snapshot;
 use PHPUnit\Event\Telemetry\Duration;
+use PHPUnit\Event\Telemetry\GarbageCollectorStatus;
 use PHPUnit\Event\Telemetry\HRTime;
+use PHPUnit\Event\Telemetry\Info;
 use PHPUnit\Event\Telemetry\MemoryUsage;
-use PHPUnit\Event\Test\Passed;
-use PHPUnit\Event\Test\Failed;
+use PHPUnit\Event\Telemetry\Snapshot;
 use PHPUnit\Event\Test\Errored;
+use PHPUnit\Event\Test\Failed;
+use PHPUnit\Event\Test\Passed;
+use PHPUnit\Event\TestData\TestDataCollection;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Metadata\MetadataCollection;
 
 class TestResultCollectorTest extends TestCase
 {
