@@ -9,7 +9,7 @@ use PHPUnit\Event\Test\Errored;
 use PHPUnit\Event\Test\Failed;
 use PHPUnit\Event\Test\Passed;
 
-final class TestResultCollector
+class TestResultCollector
 {
     /** @var array<array{test: string, status: string, message?: string}> */
     private array $results = [];
