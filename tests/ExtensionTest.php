@@ -22,8 +22,11 @@ class ExtensionTest extends TestCase
 
         $this->assertStringContainsString('test: "PeterFox\\\\PhpUnitToonResultPrinter\\\\Tests\\\\ExampleTest::test_it_passes"', $outputString);
         $this->assertStringContainsString('status: passed', $outputString);
+        $this->assertStringNotContainsString('test: "PeterFox\\\\PhpUnitToonResultPrinter\\\\Tests\\\\ExampleTest::test_it_passes"' . "\n" . '    status: passed' . "\n" . '    file:', $outputString);
         $this->assertStringContainsString('test: "PeterFox\\\\PhpUnitToonResultPrinter\\\\Tests\\\\ExampleTest::test_it_fails"', $outputString);
         $this->assertStringContainsString('status: failed', $outputString);
+        $this->assertStringContainsString('line: 16', $outputString);
         $this->assertStringContainsString('message: Failed asserting that false is true.', $outputString);
+        $this->assertStringContainsString('stackTrace:', $outputString);
     }
 }
