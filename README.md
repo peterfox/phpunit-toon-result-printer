@@ -20,7 +20,7 @@ This extension is specifically designed to provide compact, highly readable test
 You can install the package via composer:
 
 ```bash
-composer require peterfox/phpunit-toon-result-printer
+composer require peterfox/phpunit-toon-result-printer --dev
 ```
 
 ## Configuration
