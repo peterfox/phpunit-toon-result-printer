@@ -4,7 +4,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/peterfox/phpunit-toon-result-printer/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/peterfox/phpunit-toon-result-printer/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/peterfox/phpunit-toon-result-printer.svg?style=flat-square)](https://packagist.org/packages/peterfox/phpunit-toon-result-printer)
 
-A PHPUnit results printer that outputs test results in [TOON](https://github.com/helgesverre/toon) (Token-Oriented Object Notation) format.
+A PHPUnit results printer that outputs test results in [TOON](https://github.com/helgesverre/toon-php) (Token-Oriented Object Notation) format.
 
 This extension is specifically designed to provide compact, highly readable test results optimized for LLM (Large Language Model) consumption, helping AI agents quickly diagnose test failures.
 
