@@ -49,8 +49,7 @@ vendor/bin/phpunit --extension "PeterFox\PhpUnitToonResultPrinter\ToonResultPrin
 
 For a passing test:
 ```text
-test: "Tests\\ExampleTest::test_it_passes"
-status: passed
+ok
 ```
 
 For a failing test:
