@@ -29,4 +29,20 @@ class ExtensionTest extends TestCase
         $this->assertStringContainsString('message: Failed asserting that false is true.', $outputString);
         $this->assertStringContainsString('stackTrace:', $outputString);
     }
+
+    public function test_it_outputs_ok_when_all_tests_pass(): void
+    {
+        $command = sprintf(
+            '%s vendor/bin/phpunit tests/ExampleTest.php --configuration phpunit.xml.dist --filter test_it_passes',
+            PHP_BINARY
+        );
+
+        $output = [];
+        exec($command, $output);
+
+        $outputString = implode("\n", $output);
+
+        $this->assertStringContainsString('ok', $outputString);
+        $this->assertStringNotContainsString('status: passed', $outputString);
+    }
 }

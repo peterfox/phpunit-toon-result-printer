@@ -51,6 +51,18 @@ class TestResultCollector
 
     public function printResults(): void
     {
+        $hasErrors = array_reduce(
+            $this->results,
+            fn (bool $carry, array $result) => $carry || in_array($result['status'], ['failed', 'errored'], true),
+            false
+        );
+
+        if (! $hasErrors) {
+            echo 'ok' . PHP_EOL;
+
+            return;
+        }
+
         echo Toon::encode($this->results) . PHP_EOL;
     }
 

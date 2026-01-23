@@ -47,7 +47,7 @@ class TestResultCollectorTest extends TestCase
         $event = new Passed($telemetryInfo, $test);
 
         $this->collector->addPassed($event);
-        $this->expectOutputRegex('/"TestClass::testMethod",passed/');
+        $this->expectOutputString('ok' . PHP_EOL);
         $this->collector->printResults();
     }
 
