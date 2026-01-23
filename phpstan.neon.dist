@@ -1,0 +1,18 @@
+parameters:
+
+    paths:
+        - src/
+        - tests/
+
+    # Level 10 is the highest level
+    level: 6
+    ignoreErrors:
+        -
+            message: '#Call to method PHPUnit\\Framework\\Assert::assertTrue\(\) with true will always evaluate to true\.#'
+            path: tests/ExampleTest.php
+        -
+            message: '#Call to method PHPUnit\\Framework\\Assert::assertTrue\(\) with false will always evaluate to false\.#'
+            path: tests/ExampleTest.php
+        -
+            message: '#Parameter \#1 \$className of class PHPUnit\\Event\\Code\\TestMethod constructor expects class-string, string given\.#'
+            path: tests/TestResultCollectorTest.php

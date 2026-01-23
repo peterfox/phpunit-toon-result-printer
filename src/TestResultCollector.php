@@ -54,6 +54,9 @@ class TestResultCollector
         echo Toon::encode($this->results) . PHP_EOL;
     }
 
+    /**
+     * @return array{file: string, line?: int}
+     */
     private function getTestData(Test $test): array
     {
         $data = [
@@ -67,6 +70,9 @@ class TestResultCollector
         return $data;
     }
 
+    /**
+     * @return array{message: string, description: string, stackTrace: string}
+     */
     private function getThrowableData(Throwable $throwable): array
     {
         return [
