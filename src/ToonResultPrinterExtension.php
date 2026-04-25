@@ -18,6 +18,7 @@ final class ToonResultPrinterExtension implements Extension
         $facade->registerSubscriber(new TestErroredSubscriber($collector));
         $facade->registerSubscriber(new ExecutionFinishedSubscriber($collector));
 
+        $facade->replaceOutput();
         $facade->replaceProgressOutput();
         $facade->replaceResultOutput();
     }
