@@ -2,6 +2,14 @@
 
 All notable changes to `phpunit-toon-result-printer` will be documented in this file.
 
+## v1.2.0 - 2026-04-25
+
+### What's Changed
+
+* Replaces all output
+
+**Full Changelog**: https://github.com/peterfox/phpunit-toon-result-printer/compare/v1.1.0...v1.2.0
+
 ## v1.1.0 - 2026-01-23
 
 ### What's Changed
